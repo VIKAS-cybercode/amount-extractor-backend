@@ -57,9 +57,9 @@ Here is an example input image given to the service:
 ### Output (Structured JSON Response 1)
 When processed, the extracted amounts with context look like this:  
 
-![Output Example 1](images/output1.png)
+![Output Example 1](images/output_1.png)
 
-![Output Example 2](images/output2.png)
+![Output Example 2](images/output_2.png)
 
 ---
 

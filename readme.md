@@ -86,7 +86,7 @@ cpp
 Copy code
 http://127.0.0.1:5000/
 ---
-
+```
 ## Example Run (Screenshots)
 post http://127.0.0.1:5000/api/v1/extract/text
 ### Input (Medical Bill Screenshot)

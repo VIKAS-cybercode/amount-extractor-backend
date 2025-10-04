@@ -1,6 +1,6 @@
-#  Amount Extractor Backend
+# Amount Extractor Backend
 
-##  Problem Statement
+## Problem Statement
 Design a backend service that extracts financial amounts from medical bills or receipts (typed or scanned, possibly crumpled or partially visible).  
 The service must handle:
 - OCR extraction from scanned documents/images.
@@ -10,17 +10,17 @@ The service must handle:
 
 ---
 
-##  Features
--  REST API built with Flask
--  Supports text input and image input
--  Uses Tesseract OCR for image-to-text
--  Context-aware classification of amounts (via LLM or rule-based fallback)
--  JSON responses with confidence scores
--  Ready for integration with frontend or other microservices
+## Features
+- REST API built with Flask
+- Supports text input and image input
+- Uses Tesseract OCR for image-to-text
+- Context-aware classification of amounts (via LLM or rule-based fallback)
+- JSON responses with confidence scores
+- Ready for integration with frontend or other microservices
 
 ---
 
-##  Architecture
+## Architecture
 The system is designed as a modular pipeline with the following components:
 
 ### Input Layer
@@ -45,6 +45,48 @@ The system is designed as a modular pipeline with the following components:
 
 ---
 
+## Installation & Run
+
+### Requirements
+- Python 3.10+
+- Tesseract OCR (v5+ recommended)
+
+### Installation
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/amount-extractor-backend.git
+cd amount-extractor-backend
+Install dependencies
+
+bash
+Copy code
+pip install -r requirements.txt
+Install Tesseract OCR
+
+Windows: Download from Tesseract GitHub and add to PATH.
+
+Linux (Ubuntu/Debian):
+
+bash
+Copy code
+sudo apt update
+sudo apt install tesseract-ocr
+macOS (Homebrew):
+
+bash
+Copy code
+brew install tesseract
+Run the App
+bash
+Copy code
+python app.py
+The API will be available at:
+
+cpp
+Copy code
+http://127.0.0.1:5000/
+---
+
 ## Example Run (Screenshots)
 post http://127.0.0.1:5000/api/v1/extract/text
 ### Input (Medical Bill Screenshot)
@@ -57,9 +99,9 @@ Here is an example input image given to the service:
 ### Output (Structured JSON Response 1)
 When processed, the extracted amounts with context look like this:  
 
-![Output Example 1](images/output_1.png)
+![Output Example 1](images/output1.png)
 
-![Output Example 2](images/output_2.png)
+![Output Example 2](images/output2.png)
 
 ---
 
